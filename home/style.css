@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* color: #ffffff; */
+    /* font-family: "Ubuntu", sans-serif; */
+}
+
+body {
+    background-color: #F0F0F0;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    padding: 0 20px; 
+    background-color: #056CF2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.loja-button{
+    /* width: 150px;
+    height: 50px;
+    border-radius: 7px; */
+    
+    background-color: #FFA600; 
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 60px;
+    width: 160px;
+      
+    
+}
+
+.loja-button button{
+    align-items: center;
+    font-size: 25px;
+    background: none;
+    border: none;
+    text-align: center;
+    
+}
