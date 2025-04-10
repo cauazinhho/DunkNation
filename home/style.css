@@ -98,11 +98,15 @@ a {
     width: 10%;
     flex-direction: column;
     border-right: 2px solid #000000;
+    margin-left: 20px;
+    margin-right: 20px;
     
 }
 .resultados:nth-child(1){
+    
+    /* opacity: 20%; */
+    border-left: 4px solid #c4c4c4;
 
-    border-left: 4px solid #000000;
 }
 .linha{
     display: flex;
@@ -126,3 +130,46 @@ a {
     justify-content: space-around;
     align-items: center;
 }
+
+.caixa-noticias{
+    display: flex;
+    justify-content: start;
+    background-color: #056CF2;
+    padding-left: 70px;
+    margin-left: 147px;
+    margin-top: 100px;
+    width: 85%;
+    height: 800px;
+    background-image: url("../img/Curry.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+}
+.conteudo{
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 20%;
+}
+.conteudo h2{
+    font-size: 15px;
+    font-weight: bold;
+}
+.conteudo h1{
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.button{
+    background: none;
+    border: 3px solid #ffffff;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 40px;
+    color: #ffffff;
+    width: 200px;
+    padding: 20px;
+
+}
+
