@@ -13,31 +13,36 @@ body {
     background-color: #F0F0F0;
 }
 
-.container-grid{
+.container-grid {
     width: 80%;
     max-width: 1500px;
 
     margin: 0 auto;
-   
+
 }
 
 /* Inicio Header */
 
-header{
+header {
     height: 100px;
     background-color: #056CF2;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-header div.container-grid{
-    height: 100%;  
-    
+header div.container-grid {
+    height: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 
-nav{
+nav {
     width: 100%;
     height: 100%;
     display: flex;
@@ -45,24 +50,28 @@ nav{
     align-items: center;
 }
 
-nav a{
+nav a {
+    text-decoration-color: white;
+}
+
+nav a {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
     font-size: 25px;
     text-decoration: none;
     font-weight: bold;
+    text-decoration: underline transparent;
+    text-decoration-thickness: 2px;
+    transition: text-decoration 500ms ease;
+
 }
 
 a {
     text-decoration: none;
 }
 
-.loja-button{
-    /* width: 150px;
-    height: 50px;
-    border-radius: 7px; */
-    
-    background-color: #FFA600; 
+.loja-button {
+    background-color: #FFA600;
     color: black;
     padding: 10px 20px;
     border: none;
@@ -73,11 +82,16 @@ a {
     font-size: 20px;
     height: 60px;
     width: 160px;
-      
-    
+
 }
 
-.loja-button button{
+.loja-button:hover {
+    background-color: #b37400;
+    scale: 1.05;
+
+}
+
+.loja-button button {
     align-items: center;
     font-size: 25px;
     background: none;
@@ -88,13 +102,15 @@ a {
 /* Fim Header */
 
 /* Inicio Caixa de Noticias */
-.caixa-resultados{
+.caixa-resultados {
     height: 120px;
     background-color: #FFFFFF;
+    box-shadow: #000000;
+    
 
 }
 
-.caixa-resultados > .container-grid{
+.caixa-resultados>.container-grid {
     width: 80%;
     max-width: 1500px;
 
@@ -103,7 +119,7 @@ a {
 
 }
 
-.resultados{
+.resultados {
     display: flex;
     justify-content: space-between;
     width: 10%;
@@ -114,21 +130,22 @@ a {
 }
 
 
-.resultados:nth-child(1){
-    
+.resultados:nth-child(1) {
+
     /* opacity: 20%; */
     border-left: 4px solid #c4c4c4;
 
 }
-.linha{
+
+.linha {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0 ;
+    padding: 10px 0;
     font-size: 16px;
 }
 
-.linha1{
+.linha1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -137,48 +154,49 @@ a {
     font-weight: bold;
 }
 
-.time{
+.time {
     display: flex;
-    
+
 }
 
-.caixa-noticias{
+.caixa-noticias {
     display: flex;
     background-color: #056CF2;
-    margin-top: 100px;
+    margin-top: 300px;
     margin-bottom: 100px;
     flex-direction: column;
     justify-content: space-between;
-    
+
     height: 800px;
     background-image: url("../img/Curry.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.caixa-noticias > .container-grid{
+.caixa-noticias>.container-grid {
     width: 80%;
     max-width: 1500px;
 
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-.conteudo{
+.conteudo {
     font-size: 20px;
     color: #ffffff;
     margin-left: 80px;
     margin-top: 15%;
-    
-    
+
+
 }
 
-.conteudo h1{
+.conteudo h1 {
     font-weight: bold;
     font-size: 30px;
     font-family: "Montserrat";
     padding-bottom: 15px;
 }
-.conteudo h2{
+
+.conteudo h2 {
     font-size: 15px;
     font-weight: bold;
     font-family: "Montserrat";
@@ -186,7 +204,7 @@ a {
 
 }
 
-.button{
+.button {
     background: none;
     border: 3px solid #ffffff;
     text-align: center;
@@ -199,29 +217,30 @@ a {
     padding: 20px;
 }
 
-.conteudo > .button{
+.conteudo>.button {
     margin-left: 150px;
 }
 
-.conteudo-load{
-    
+.conteudo-load {
+
     font-size: 20px;
     color: #ffffff;
     /* margin-left: 100px; */
-    
+
     display: flex;
     flex-direction: column;
-} 
+}
 
-.conteudo-load h2{
+.conteudo-load h2 {
     font-size: 17px;
     font-weight: 900;
     font-family: "Roboto", sans-serif;
     padding-bottom: 15px;
-    
-    
+
+
 }
-.conteudo-load h3{
+
+.conteudo-load h3 {
     font-size: 18px;
     font-weight: lighter;
     font-family: "Anton";
@@ -231,7 +250,7 @@ a {
 
 }
 
-.load{
+.load {
     display: flex;
     justify-content: space-between;
     padding: 0px 80px;
@@ -244,7 +263,7 @@ a {
 /* Inicio dos Storys */
 
 /* texto h2 */
-.story h2{
+.story h2 {
     font-size: 28px;
     font-family: "Anton";
     font-weight: 500;
@@ -254,23 +273,90 @@ a {
 }
 
 /* Cards dos storys */
-.card-story{
-    
+.card-story {
+
     padding-top: 60px;
     display: flex;
     justify-content: space-between;
 
 }
 
+/* Fim do Card-Stories */
 
+/* Inicio da Loja */
 
+.destaque-loja {
+    margin-top: 100px;
+    background-color: #FFFFFF;
+
+    padding: 15px;
+
+}
+
+.destaque-loja h2 {
+    font-size: 28px;
+    font-family: "Anton";
+    font-weight: 500;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #c4c4c4;
+    padding-left: 2%;
+}
+
+.produtos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.camisa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.camisa-img {
+    width: 170px;
+    height: 210px;
+
+}
+
+.camisa p {
+    padding: 30px 0;
+    font-family: 'Anton';
+    font-size: 20px;
+}
+
+.camisa h3 {
+    font-size: 17px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    max-width: 300px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 10px;
+    gap: 10px;
+    margin-top: 100px;
+
+}
+
+.img-icon {
+    width: 22px;
+    height: 22px;
+}
 
 
 
 /* Footer */
 
 /* Caixa inteira */
-footer{
+footer {
     background-color: #000000;
     width: 100%;
     height: 800px;
@@ -283,24 +369,24 @@ footer{
 }
 
 /* Seguir o Dunk Nation texto */
-footer h1{
+footer h1 {
     display: flex;
     justify-content: center;
-    
+
     padding: 50px;
     font-size: 30px;
     font-family: "Montserrat";
 }
 
 /* Logos */
-.redes > img{
+.redes>img {
     width: 40px;
 
 
 }
 
 /* Caixa Cinza */
-.redes{
+.redes {
     background-color: #262626;
     width: 300px;
     height: 165px;
@@ -311,10 +397,10 @@ footer h1{
     justify-content: space-evenly;
     align-items: right;
     padding-left: 2%;
-}   
+}
 
 /* Nomes das Redes */
-footer h3{
+footer h3 {
     font-size: 20px;
     font-family: "Inter";
     font-weight: 400;
@@ -323,7 +409,7 @@ footer h3{
 }
 
 /* @ das Redes */
-footer p{
+footer p {
     font-size: 20px;
     font-family: "Inter";
     font-weight: 500;
@@ -331,7 +417,7 @@ footer p{
 }
 
 /* Caixa onde está todos times */
-.redes-sociais{
+.redes-sociais {
     display: flex;
     justify-content: space-between;
     padding: 0px 140px;
@@ -343,18 +429,18 @@ footer p{
 
 /* Parte de baixo da divisão */
 
-.direitos-reservados{
+.direitos-reservados {
     display: flex;
     justify-content: right;
     flex-direction: column;
     align-items: center;
     color: #ffffff;
 
-    
+
 }
 
 .direitos-reservados p {
-    margin-top: 50px;   
+    margin-top: 50px;
     width: 80%;
 
     font-size: 20px;
@@ -364,22 +450,19 @@ footer p{
 }
 
 /* Imagem copy */
-.copy img{
+.copy img {
     width: 40px;
 }
 
-.copy{
+.copy {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 100px;
 }
 
-.copy h2{
+.copy h2 {
     font-size: 25px;
     font-family: "Anton";
     font-weight: 400;
 }
-
-
-
